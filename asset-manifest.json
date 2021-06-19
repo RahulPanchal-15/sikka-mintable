@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/sikka-mintable/static/css/main.b100e6da.chunk.css",
+    "main.js": "/sikka-mintable/static/js/main.9536477a.chunk.js",
+    "main.js.map": "/sikka-mintable/static/js/main.9536477a.chunk.js.map",
+    "runtime-main.js": "/sikka-mintable/static/js/runtime-main.8dbe66ab.js",
+    "runtime-main.js.map": "/sikka-mintable/static/js/runtime-main.8dbe66ab.js.map",
+    "static/js/2.a0ea077e.chunk.js": "/sikka-mintable/static/js/2.a0ea077e.chunk.js",
+    "static/js/2.a0ea077e.chunk.js.map": "/sikka-mintable/static/js/2.a0ea077e.chunk.js.map",
+    "index.html": "/sikka-mintable/index.html",
+    "precache-manifest.5e43b64022271faf49c8650ef9aff7d8.js": "/sikka-mintable/precache-manifest.5e43b64022271faf49c8650ef9aff7d8.js",
+    "service-worker.js": "/sikka-mintable/service-worker.js",
+    "static/css/main.b100e6da.chunk.css.map": "/sikka-mintable/static/css/main.b100e6da.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8dbe66ab.js",
+    "static/js/2.a0ea077e.chunk.js",
+    "static/css/main.b100e6da.chunk.css",
+    "static/js/main.9536477a.chunk.js"
+  ]
+}
