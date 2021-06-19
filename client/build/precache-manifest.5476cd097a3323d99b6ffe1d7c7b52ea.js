@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d545d88bad3d00492590463d072cd65a",
+    "revision": "76898b3cb178fa51ba1c81f94eb61210",
     "url": "/sikka-mintable/index.html"
   },
   {
