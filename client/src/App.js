@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Sikka from "./contracts/Sikka.json";
 import SikkaTokenSale from "./contracts/SikkaTokenSale.json";
 import KycContract from "./contracts/KycContract.json";
+import coingif from "./coin-mario.gif";
 
 import getWeb3 from "./getWeb3";
 
@@ -16,7 +17,8 @@ class App extends Component {
     totalSupply: 0,
     userTokens: 0,
     inputAmount: 1,
-    isOwner : false
+    isOwner : false,
+    isVerified : false
   };
 
   componentDidMount = async () => {
@@ -45,18 +47,21 @@ class App extends Component {
 
       this.owner = await this.kycInstance.methods.owner().call();
 
+      const verified = await this.kycInstance.methods.kycCompleted(this.accounts[0]).call();
+      
       this.listenToTokenTransfer();
       this.setState({
-        loaded:true, 
         tokenSaleAddress:SikkaTokenSale.networks[this.networkId].address,
-        isOwner: this.owner === this.accounts[0]
+        isVerified: verified,
+        isOwner: this.owner === this.accounts[0],
+        loaded:true, 
       }, 
         this.updateFunction );
 
 
     } catch (error) {
       alert(
-        `Failed to load web3, accounts, or contract. Check console for details.`,
+        `Install Metamask extension and choose the Ropsten TestNet.`,
       );
       console.error(error);
     }
@@ -99,19 +104,25 @@ class App extends Component {
   handleBuyTokens = async() => {
     await this.sikkaSaleInstance.methods.buyTokens(this.accounts[0])
     .send({from: this.accounts[0], value : this.web3.utils.toWei(this.state.inputAmount.toString(),"wei")});
-  }
+  };
 
 
   render() {
     if (this.state.loading) {
-      return <div>Loading Web3, accounts, and contract...</div>;
+      return <div>Loading Metamask, accounts, and contract...</div>;
     }
     return (
       <div className="App">
-        <h1>Sikka Token Sale</h1>
+        <br/>
+        <br/>
+        <div className = "container-fluid">
+        <div className = "aligned">
+        <img src = {coingif} alt = "Coin" style={{width: 60}}/><span><h1>Sikka Token Sale</h1></span><img src = {coingif} alt = "Coin" style={{width: 60}}/>
+        </div>
         <p>
-          Get your Sikka Token today!
+          <font size="12px"><i>Get your Sikka Token today, Invest in the future!</i></font>
         </p>
+        
         {this.state.isOwner && 
           <div>
             <h2>Kyc Whitelisting</h2>
@@ -122,16 +133,44 @@ class App extends Component {
 
           </div>  
         }
-
-        <h2>Total SIKKA supply  : {this.state.totalSupply}</h2>
-        <p>
-          If you want to buy tokens, send Wei to this address : {this.state.tokenSaleAddress} 
-        </p>
+        <font size="6"><i>Total SIKKA supply  : {this.state.totalSupply}</i></font>
         <br/>
-        <h3> <p>You currently have {this.state.userTokens} SIKKA </p> </h3>
-        <p>I want <input type = "text" name = "inputAmount" value = {this.state.inputAmount} onChange={this.handleInputChange} /> WEI worth of SIK.</p>
-        <p><button type = "button" onClick = {this.handleBuyTokens}> BUY </button></p>
+        <div className="alert alert-warning" role="alert" style={{width: "500px", display: "inline-block"}}>
+          Sikka Token ICO has been deployed on the Ropsten TestNet.<br/>
+          <a href="https://faucet.ropsten.be/" target="_">Use Ropsten Test Ether to buy Sikka!</a> 
+        </div>
+
+        <hr/>
+        {this.state.isVerified && 
+
+          <div>  
+            <p>
+              If you want to buy SIKKA tokens, send Wei to this address :  
+            </p>
+            <div className="alert alert-info" role="alert" style={{width: "500px", display: "inline-block"}}>
+              {this.state.tokenSaleAddress}
+            </div>
+            <br/>
+
+            <font size="5"><p>You currently have {this.state.userTokens} SIKKA </p></font>
+            <div className="alert alert-dark" role="alert" style={{width: "500px", height: "100px", display: "inline-block"}}>
+              <p>I want <input type = "text" name = "inputAmount" value = {this.state.inputAmount} min= "1" onChange={this.handleInputChange} /> SIKKA.</p>
+              <p><button type = "button" className="btn btn-primary" onClick = {this.handleBuyTokens}> BUY </button></p>
+            </div>
+          </div>
+        }
+        {!this.state.isVerified && 
+          <div className="alert alert-danger" role="alert" style={{width: "500px", display:"inline-block"}}>
+            This Address has not yet been verified.<br/>
+            Send us your name and account address on Telegram!<br/>
+            <a href="http://t.me/sikkaToken" target="_">SikkaTokenSale Channel</a>
+          </div>
+        }
+        
+      
       </div>
+      </div>
+
     );
   }
 }

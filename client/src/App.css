@@ -17,6 +17,26 @@
   color: white;
 }
 
+.container-fluid {
+  width: 600px;
+  padding-top: 20px;
+  background-image: linear-gradient(to top, navajowhite, white);
+  background-color: navajowhite;
+  border-radius: 20px;
+  height: max-content;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 10px;
+}
+
 .App-link {
   color: #09d3ac;
+}
+
+.aligned {
+  display: inline-flex;
+  align-items: center;
+}
+
+span {
+  padding-left: 20px;
+  padding-right: 20px;
 }
