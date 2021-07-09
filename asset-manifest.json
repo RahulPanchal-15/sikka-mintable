@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sikka-mintable/static/css/main.3ffe561d.chunk.css",
-    "main.js": "/sikka-mintable/static/js/main.cb1e50f1.chunk.js",
-    "main.js.map": "/sikka-mintable/static/js/main.cb1e50f1.chunk.js.map",
+    "main.js": "/sikka-mintable/static/js/main.eb6ea623.chunk.js",
+    "main.js.map": "/sikka-mintable/static/js/main.eb6ea623.chunk.js.map",
     "runtime-main.js": "/sikka-mintable/static/js/runtime-main.8dbe66ab.js",
     "runtime-main.js.map": "/sikka-mintable/static/js/runtime-main.8dbe66ab.js.map",
     "static/js/2.9b217186.chunk.js": "/sikka-mintable/static/js/2.9b217186.chunk.js",
     "static/js/2.9b217186.chunk.js.map": "/sikka-mintable/static/js/2.9b217186.chunk.js.map",
     "index.html": "/sikka-mintable/index.html",
-    "precache-manifest.1382f1d14c4a39a12140ddc9ac28444b.js": "/sikka-mintable/precache-manifest.1382f1d14c4a39a12140ddc9ac28444b.js",
+    "precache-manifest.3710da762651a2432fdabab64f82e080.js": "/sikka-mintable/precache-manifest.3710da762651a2432fdabab64f82e080.js",
     "service-worker.js": "/sikka-mintable/service-worker.js",
     "static/css/main.3ffe561d.chunk.css.map": "/sikka-mintable/static/css/main.3ffe561d.chunk.css.map",
     "static/media/coin-mario.gif": "/sikka-mintable/static/media/coin-mario.700b900e.gif"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.8dbe66ab.js",
     "static/js/2.9b217186.chunk.js",
     "static/css/main.3ffe561d.chunk.css",
-    "static/js/main.cb1e50f1.chunk.js"
+    "static/js/main.eb6ea623.chunk.js"
   ]
 }

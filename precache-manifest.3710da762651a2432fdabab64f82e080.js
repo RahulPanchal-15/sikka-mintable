@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "67dd17b18acea890232627cb2398f302",
+    "revision": "b6c2a75e1de51c4ff12e3c53616dd537",
     "url": "/sikka-mintable/index.html"
   },
   {
-    "revision": "6b5dfdcbd0da92d8b59c",
+    "revision": "344c83d8a33fb97b4225",
     "url": "/sikka-mintable/static/css/main.3ffe561d.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sikka-mintable/static/js/2.9b217186.chunk.js"
   },
   {
-    "revision": "6b5dfdcbd0da92d8b59c",
-    "url": "/sikka-mintable/static/js/main.cb1e50f1.chunk.js"
+    "revision": "344c83d8a33fb97b4225",
+    "url": "/sikka-mintable/static/js/main.eb6ea623.chunk.js"
   },
   {
     "revision": "d48b2335bb93899a1f1d",
