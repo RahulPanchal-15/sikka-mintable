@@ -163,7 +163,7 @@ class App extends Component {
           <div className="alert alert-danger" role="alert" style={{width: "500px", display:"inline-block"}}>
             This Address has not yet been verified.<br/>
             Send us your name and account address on Telegram!<br/>
-            <a href="http://t.me/sikkaToken" target="_">SikkaTokenSale Channel</a>
+            <a href="https://t.me/joinchat/8IcM5D1zIPQyNjE1" target="_">SikkaTokenSale Channel</a>
           </div>
         }
         
