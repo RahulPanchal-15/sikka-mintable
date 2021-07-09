@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sikka-mintable/precache-manifest.1382f1d14c4a39a12140ddc9ac28444b.js"
+  "/sikka-mintable/precache-manifest.3710da762651a2432fdabab64f82e080.js"
 );
 
 self.addEventListener('message', (event) => {
